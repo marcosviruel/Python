@@ -1,0 +1,11 @@
+{
+  "SETOR": "FARMACIA",
+  "UF": "PR",
+  "CIDADE": "CURITIBA",
+  "MIN_LEADS_BAIRRO": 5,
+  "TOP_N_BAIRROS": 30,
+  "SCORE_MINIMO_BAIRRO": 90,
+  "NATUREZAS_EXCLUIDAS": ["2135", "MEI", "4081"],
+  "PASTA_BASE": "Rede_Farmacia_Com_CEP_Offline",
+  "NOME_CAMPANHA": "Expansão Nacional Farmácias 2024"
+}

@@ -1,0 +1,7 @@
+{
+  "UF": "PR",
+  "CIDADE": "CURITIBA",
+  "TOP_N_BAIRROS": 60,
+  "SCORE_MINIMO_BAIRRO": 85,
+  "MIN_LEADS_BAIRRO": 10
+}
