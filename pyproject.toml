@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "rfb-pipeline"
+version = "1.0.0"
+description = "Pipeline de download de dados públicos da Receita Federal"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-mock>=3.12.0",
+    "responses>=0.25.0",
+    "mypy>=1.9.0",
+    "ruff>=0.3.0",
+]
+
+[project.scripts]
+# permite rodar como comando após instalar o pacote:
+# pip install -e .
+# rfb-pipeline --competencia 2026-03
+rfb-pipeline = "main:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "INFO"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "N", "W", "UP"]
